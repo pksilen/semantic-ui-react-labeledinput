@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() should render component with additional HTML attributes correctly 1`] = `
+<div
+  className="test"
+  id="test1"
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render component with errorTextPosition "right" correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
+  <div
+    className="ui input huge"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render component with presentation "box" correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render component with presentation "line" correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "borderLeft": "none",
+          "borderRadius": 0,
+          "borderRight": "none",
+          "borderTop": "none",
+          "paddingBottom": "0.407142858em",
+          "paddingLeft": "0.5em",
+          "paddingRight": "0.5em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render disabled component correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge disabled"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render icon correctly depending on iconPosition and iconColor 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge right icon"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+    <Icon
+      as="i"
+      color="blue"
+      name="search"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render validationErrorIcon correctly on right side 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge right icon"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+    <Icon
+      as="i"
+      color="green"
+      name=""
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`render() should render validationSuccessIcon correctly on right side 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <div
+    className="ui input huge right icon"
+  >
+    <label
+      htmlFor="input1"
+      style={
+        Object {
+          "fontSize": "65%",
+          "left": 0,
+          "lineHeight": "1.21428571em",
+          "paddingLeft": "0.3em",
+          "position": "absolute",
+          "top": 0,
+          "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
+        }
+      }
+    >
+      Value
+    </label>
+    <input
+      id="input1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "paddingBottom": "0.407142858em",
+          "paddingTop": "0.95em",
+        }
+      }
+      type="text"
+      value="abc"
+    />
+    <Icon
+      as="i"
+      color="green"
+      name=""
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    />
+  </div>
+</div>
+`;
