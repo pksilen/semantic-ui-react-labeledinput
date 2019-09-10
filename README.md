@@ -11,22 +11,22 @@ Input control with integrated label and validation support for [Semantic UI Reac
 [![MIT License][license-badge]][license]
 
 ## Examples of box inputs
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/box_example1.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/box_example1.png)
    
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/box_example2.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/box_example2.png)
     
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/box_validation_example1.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/box_validation_example1.png)
 
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/box_validation_example2.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/box_validation_example2.png)
 
 ## Examples of line inputs
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/line_example1.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/line_example1.png)
    
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/line_example2.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/line_example2.png)
     
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/line_validation_example1.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/line_validation_example1.png)
 
-![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/line_validation_example2.png)
+![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/line_validation_example2.png)
 
 ## Prerequisites
     "react": "^16.0.0",
