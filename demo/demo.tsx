@@ -109,6 +109,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 0)}
         />
         <br />
+        <br />
         LabeledInput with URL validation
         <LabeledInput
           inputId="input1"
@@ -120,6 +121,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[1]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 1)}
         />
+        <br />
         <br />
         LabeledInput with e-mail address validation
         <LabeledInput
@@ -133,6 +135,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 2)}
         />
         <br />
+        <br />
         LabeledInput with credit card number validation
         <LabeledInput
           inputId="input3"
@@ -144,6 +147,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[3]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 3)}
         />
+        <br />
         <br />
         LabeledInput with credit card expiration validation
         <LabeledInput
@@ -157,6 +161,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 4)}
         />
         <br />
+        <br />
         LabeledInput with credit card verification code validation
         <LabeledInput
           inputId="input5"
@@ -168,6 +173,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[5]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 5)}
         />
+        <br />
         <br />
         LabeledInput with number validation
         <LabeledInput
@@ -193,6 +199,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 7)}
         />
         <br />
+        <br />
         LabeledInput with alphaNumeric validation
         <LabeledInput
           inputId="input8"
@@ -204,6 +211,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[8]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 8)}
         />
+        <br />
         <br />
         LabeledInput with US ZIP code validation
         <LabeledInput
@@ -217,6 +225,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 9)}
         />
         <br />
+        <br />
         LabeledInput with Canadian postal code validation
         <LabeledInput
           inputId="input10"
@@ -228,6 +237,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[10]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 10)}
         />
+        <br />
         <br />
         LabeledInput with UK postal code validation
         <LabeledInput
@@ -241,6 +251,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 11)}
         />
         <br />
+        <br />
         LabeledInput with phone number validation
         <LabeledInput
           inputId="input12"
@@ -252,6 +263,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[12]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 12)}
         />
+        <br />
         <br />
         LabeledInput with US social security number validation
         <LabeledInput
@@ -265,6 +277,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 13)}
         />
         <br />
+        <br />
         LabeledInput with IP address validation
         <LabeledInput
           inputId="input14"
@@ -276,6 +289,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[14]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 14)}
         />
+        <br />
         <br />
         LabeledInput with IPv4 address validation
         <LabeledInput
@@ -289,6 +303,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 15)}
         />
         <br />
+        <br />
         LabeledInput with IPv6 address validation
         <LabeledInput
           inputId="input16"
@@ -300,6 +315,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[16]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 16)}
         />
+        <br />
         <br />
         LabeledInput with hex color validation
         <LabeledInput
@@ -313,6 +329,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 17)}
         />
         <br />
+        <br />
         LabeledInput with icon
         <LabeledInput
           inputId="input18"
@@ -323,6 +340,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[18]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 18)}
         />
+        <br />
         <br />
         LabeledInput with validation icons
         <LabeledInput
@@ -352,6 +370,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 20)}
         />
         <br />
+        <br />
         Big
         <LabeledInput
           inputId="input21"
@@ -363,6 +382,7 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 21)}
         />
         <br />
+        <br />
         Huge
         <LabeledInput
           inputId="input22"
@@ -373,6 +393,7 @@ class DemoApp extends React.Component<{}, State> {
           value={values[22]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 22)}
         />
+        <br />
         <br />
         Massive
         <LabeledInput
