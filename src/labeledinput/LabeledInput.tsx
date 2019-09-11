@@ -21,7 +21,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   errorTextPosition: 'bottom' | 'right';
   icon: SemanticICONS;
   iconColor: SemanticCOLORS;
-  iconPosition: 'left' | 'right';
+  iconPosition: 'right';
   inputId: string;
   label: string;
   maxLength?: number;
@@ -57,7 +57,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     errorTextPosition: PropTypes.oneOf(['bottom', 'right']),
     icon: PropTypes.string,
     iconColor: PropTypes.string,
-    iconPosition: PropTypes.oneOf(['left', 'right']),
+    iconPosition: PropTypes.oneOf(['right']),
     inputId: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     maxLength: PropTypes.number,
@@ -108,7 +108,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     errorTextPosition: 'bottom',
     icon: '',
     iconColor: undefined,
-    iconPosition: 'left',
+    iconPosition: 'right',
     maxLength: undefined,
     maxValue: undefined,
     minLength: undefined,
@@ -314,13 +314,13 @@ export default class LabeledInput extends React.Component<Props, {}> {
   };
 
   getIconStyle = (): React.CSSProperties => {
-    const { iconPosition, validationErrorIcon, validationSuccessIcon } = this.props;
+    const { validation, validationErrorIcon, validationSuccessIcon, value } = this.props;
 
     if (validationErrorIcon || validationSuccessIcon) {
       return styleMap.validationIcon;
     }
 
-    if (iconPosition === 'left') {
+    if (validation === 'creditCardNumber' && value) {
       return styleMap.leftIcon;
     }
 

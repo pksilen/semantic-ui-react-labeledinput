@@ -61,7 +61,7 @@ describe('defaultProps', () => {
     expect(lineInputWrapper.props().errorTextPosition).toBe('bottom');
     expect(lineInputWrapper.props().icon).toBe('');
     expect(lineInputWrapper.props().iconColor).toBe(undefined);
-    expect(lineInputWrapper.props().iconPosition).toBe('left');
+    expect(lineInputWrapper.props().iconPosition).toBe('right');
     expect(lineInputWrapper.props().maxLength).toBe(undefined);
     expect(lineInputWrapper.props().maxValue).toBe(undefined);
     expect(lineInputWrapper.props().minLength).toBe(undefined);
