@@ -100,8 +100,6 @@ class DemoApp extends React.Component<{}, State> {
           </Form.Field>
         </Form>
         <h2>LabeledInput</h2>
-        LabeledInput without validation
-        <br />
         <LabeledInput
           inputId="input0"
           label="Value"
@@ -110,8 +108,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 0)}
         />
         <br />
-        <br />
-        LabeledInput with URL validation
         <br />
         <LabeledInput
           inputId="input1"
@@ -125,8 +121,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with e-mail address validation
-        <br />
         <LabeledInput
           inputId="input2"
           label="E-mail address"
@@ -138,8 +132,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 2)}
         />
         <br />
-        <br />
-        LabeledInput with credit card number validation
         <br />
         <LabeledInput
           inputId="input3"
@@ -153,8 +145,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with credit card expiration validation
-        <br />
         <LabeledInput
           inputId="input4"
           label="MM / YY"
@@ -166,8 +156,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 4)}
         />
         <br />
-        <br />
-        LabeledInput with credit card verification code validation
         <br />
         <LabeledInput
           inputId="input5"
@@ -181,8 +169,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with number validation
-        <br />
         <LabeledInput
           inputId="input6"
           label="Number"
@@ -194,8 +180,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 6)}
         />
         <br />
-        <br />
-        LabeledInput with integer validation
         <br />
         <LabeledInput
           inputId="input7"
@@ -209,8 +193,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with alphaNumeric validation
-        <br />
         <LabeledInput
           inputId="input8"
           label="AlphaNumeric"
@@ -222,8 +204,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 8)}
         />
         <br />
-        <br />
-        LabeledInput with US ZIP code validation
         <br />
         <LabeledInput
           inputId="input9"
@@ -237,8 +217,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with Canadian postal code validation
-        <br />
         <LabeledInput
           inputId="input10"
           label="CA postal code"
@@ -250,8 +228,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 10)}
         />
         <br />
-        <br />
-        LabeledInput with UK postal code validation
         <br />
         <LabeledInput
           inputId="input11"
@@ -265,8 +241,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with phone number validation
-        <br />
         <LabeledInput
           inputId="input12"
           label="Phone number"
@@ -278,8 +252,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 12)}
         />
         <br />
-        <br />
-        LabeledInput with US social security number validation
         <br />
         <LabeledInput
           inputId="input13"
@@ -293,8 +265,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with IP address validation
-        <br />
         <LabeledInput
           inputId="input14"
           label="IP address"
@@ -306,8 +276,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 14)}
         />
         <br />
-        <br />
-        LabeledInput with IPv4 address validation
         <br />
         <LabeledInput
           inputId="input15"
@@ -321,8 +289,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with IPv6 address validation
-        <br />
         <LabeledInput
           inputId="input16"
           label="IPv6 address"
@@ -334,8 +300,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 16)}
         />
         <br />
-        <br />
-        LabeledInput with hex color validation
         <br />
         <LabeledInput
           inputId="input17"
@@ -349,8 +313,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        LabeledInput with icon
-        <br />
         <LabeledInput
           inputId="input18"
           label="Search..."
@@ -361,8 +323,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 18)}
         />
         <br />
-        <br />
-        LabeledInput with validation icons
         <br />
         <LabeledInput
           inputId="input19"
@@ -380,8 +340,6 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <h2>Sizes</h2>
         <br />
-        Large
-        <br />
         <LabeledInput
           inputId="input20"
           label="Enter value"
@@ -392,8 +350,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 20)}
         />
         <br />
-        <br />
-        Big
         <br />
         <LabeledInput
           inputId="input21"
@@ -406,8 +362,6 @@ class DemoApp extends React.Component<{}, State> {
         />
         <br />
         <br />
-        Huge
-        <br />
         <LabeledInput
           inputId="input22"
           label="Enter value"
@@ -418,8 +372,6 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 22)}
         />
         <br />
-        <br />
-        Massive
         <br />
         <LabeledInput
           inputId="input23"
