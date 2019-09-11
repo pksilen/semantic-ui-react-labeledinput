@@ -23,7 +23,8 @@ const styleMap: { [key: string]: CSSProperties } = {
   },
   focusedOrValuedInputLabel: {
     fontSize: '65%',
-    paddingLeft: '0.3em'
+    paddingLeft: '0.3em',
+    top: '2px'
   },
   input: {
     paddingBottom: '0.407142858em',

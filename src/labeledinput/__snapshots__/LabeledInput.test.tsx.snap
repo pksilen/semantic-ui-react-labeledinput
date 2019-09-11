@@ -15,6 +15,7 @@ exports[`render() should render component with additional HTML attributes correc
     className="ui input huge"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -60,6 +61,7 @@ exports[`render() should render component with errorTextPosition "right" correct
     className="ui input huge"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -106,6 +108,7 @@ exports[`render() should render component with presentation "box" correctly 1`] 
     className="ui input huge"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -152,6 +155,7 @@ exports[`render() should render component with presentation "line" correctly 1`]
     className="ui input huge"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -204,6 +208,7 @@ exports[`render() should render disabled component correctly 1`] = `
     className="ui input huge disabled"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -250,6 +255,7 @@ exports[`render() should render focused component correctly 1`] = `
     className="ui input huge focus"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -296,6 +302,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
     className="ui input huge 'right icon"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -348,6 +355,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
     className="ui input huge 'right icon"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
@@ -404,6 +412,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
     className="ui input huge 'right icon"
   >
     <label
+      className="focusedOrValued"
       htmlFor="input1"
       style={
         Object {
