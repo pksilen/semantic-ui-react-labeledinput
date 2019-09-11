@@ -501,7 +501,7 @@ describe('render()', () => {
         inputId="input1"
         label="Value"
         onValueChange={onValueChangeMock}
-        validationErrorIcon="exclamation"
+        validationSuccessIcon="check"
         value="abc"
       />
     );
