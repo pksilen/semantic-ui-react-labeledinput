@@ -161,7 +161,7 @@ LabeledInput with list of allowed values validation (case sensitive)
     type: undefined,
     validation: undefined
     
-## Styling example
+## Box input styling example
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example1.png) 
    
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example2.png)
@@ -201,6 +201,46 @@ LabeledInput with list of allowed values validation (case sensitive)
     <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
     <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="box" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
 
+## Line input styling example
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example1.png) 
+   
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example2.png)
+   
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example3.png)
+    
+   styles.css
+   
+    .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
+      font-size: 0.7em;
+    }
+       
+    .creditCardNumber input {
+      width: 13.5em;
+    }
+       
+    .creditCardExpiration {
+      margin-left: 0.5em;
+    }
+       
+    .creditCardExpiration input {
+      width: 4.5em;
+    }
+       
+    .cvc {
+      margin-left: 0.5em;
+    }
+       
+    .cvc input {
+      margin-left: 0.5em;
+      width: 3.5em;
+    }
+   
+   Applying CSS using className
+       
+    <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+    <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+    <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+ 
 ## License
 MIT License
 
