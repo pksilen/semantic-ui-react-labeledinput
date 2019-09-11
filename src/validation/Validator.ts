@@ -11,7 +11,6 @@ import { parsePhoneNumberFromString } from 'libphonenumber-js/max';
 import { ValidationType } from './ValidationType';
 
 export default class Validator {
-  // noinspection FunctionWithMoreThanThreeNegationsJS,OverlyComplexFunctionJS
   // eslint-disable-next-line consistent-return
   static validateValue(
     valueString: string,

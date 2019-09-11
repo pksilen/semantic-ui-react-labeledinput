@@ -105,7 +105,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     disabled: false,
     errorText: '',
     errorTextPosition: 'bottom',
-    focus: PropTypes.bool,
+    focus: false,
     icon: '',
     iconColor: undefined,
     iconPosition: 'right',
@@ -289,9 +289,9 @@ export default class LabeledInput extends React.Component<Props, {}> {
 
     if (this.hasIcon()) {
       if (validation === 'creditCardNumber' && value) {
-        className = `${className} 'left icon`;
+        className = `${className} left icon`;
       } else {
-        className = `${className} 'right icon`;
+        className = `${className} right icon`;
       }
     }
 

@@ -299,7 +299,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
   }
 >
   <div
-    className="ui input huge 'right icon"
+    className="ui input huge right icon"
   >
     <label
       className="focusedOrValued"
@@ -352,7 +352,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
   }
 >
   <div
-    className="ui input huge 'right icon"
+    className="ui input huge right icon"
   >
     <label
       className="focusedOrValued"
@@ -409,7 +409,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
   }
 >
   <div
-    className="ui input huge 'right icon"
+    className="ui input huge right icon"
   >
     <label
       className="focusedOrValued"
