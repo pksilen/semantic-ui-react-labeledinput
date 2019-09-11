@@ -436,27 +436,14 @@ describe('getIconName()', () => {
 });
 
 describe('render()', () => {
-  it('should render component with presentation "box" correctly', () => {
+  test.each([['box'], ['line']])
+  ('it should render component with given presentation correctly', (presentation) => {
     const lineInputWrapper = renderShallow(
       <LabeledInput
         inputId="input1"
         label="Value"
         onValueChange={onValueChangeMock}
-        presentation="box"
-        value="abc"
-      />
-    );
-
-    expect(lineInputWrapper).toMatchSnapshot();
-  });
-
-  it('should render component with presentation "line" correctly', () => {
-    const lineInputWrapper = renderShallow(
-      <LabeledInput
-        inputId="input1"
-        label="Value"
-        onValueChange={onValueChangeMock}
-        presentation="line"
+        presentation={presentation as 'line' | 'box'}
         value="abc"
       />
     );
