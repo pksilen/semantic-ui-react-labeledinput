@@ -114,6 +114,7 @@ LabeledInput with list of allowed values validation (case sensitive)
 | icon                      | Name of Semantic UI icon to be shown in input, is overridden by validationErrorIcon or validationSuccessIcon, has no effect for validation type 'creditCardNumber  |
 | iconColor                 | Color for icon (red, orange, yellow, olive, green, teal, blue, violet, purple, pink, brown, grey, black                                                            |
 | iconPosition              | Position where the icon is shown                                                                                                                                   |
+| labelTopOffset            | Adjust label offset from top                                                                                                                                       |
 | maxLength                 | Maximum number of characters allowed for input control value                                                                                                       |
 | maxValue                  | Maximum allowed value when validation is 'number' or 'integer'                                                                                                     |
 | minLength                 | Minimum number of characters needed for input control value                                                                                                        |
@@ -138,6 +139,7 @@ LabeledInput with list of allowed values validation (case sensitive)
     icon: string,
     iconColor: string,
     iconPosition: 'right',
+    labelTopOffset: string,
     maxLength: number,
     maxValue: number,
     minLength: number,
@@ -159,6 +161,7 @@ LabeledInput with list of allowed values validation (case sensitive)
     icon: '',
     iconColor: undefined,
     iconPosition: 'right',
+    labelTopOffset: '2px',
     maxLength: undefined,
     maxValue: undefined,
     minLength: undefined,

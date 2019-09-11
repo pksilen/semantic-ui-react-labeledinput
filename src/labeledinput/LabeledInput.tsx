@@ -24,6 +24,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   iconPosition: 'left' | 'right';
   inputId: string;
   label: string;
+  labelTopOffset: string;
   maxLength?: number;
   maxValue?: number;
   minLength?: number;
@@ -60,6 +61,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     iconPosition: PropTypes.oneOf(['left', 'right']),
     inputId: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
+    labelTopOffset: PropTypes.string,
     maxLength: PropTypes.number,
     maxValue: PropTypes.number,
     minLength: PropTypes.number,
@@ -109,6 +111,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     icon: '',
     iconColor: undefined,
     iconPosition: 'right',
+    labelTopOffset: '2px',
     maxLength: undefined,
     maxValue: undefined,
     minLength: undefined,
@@ -279,14 +282,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
   };
 
   getClassName = (): string => {
-    const {
-      disabled,
-      focus,
-      presentation,
-      size,
-      validation,
-      value
-    } = this.props;
+    const { disabled, focus, presentation, size, validation, value } = this.props;
     const { hasValidValue } = this.state;
 
     let className = `ui input ${size}`;
@@ -342,6 +338,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
       iconPosition,
       inputId,
       label,
+      labelTopOffset,
       minLength,
       minValue,
       maxLength,
@@ -368,7 +365,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     const inputLabelStyle = {
       ...styleMap.inputLabel,
       ...(presentation === 'line' ? styleMap.lineInputLabel : styleMap.boxInputLabel),
-      ...(hasFocus || value ? styleMap.focusedOrValuedInputLabel : {})
+      ...(hasFocus || value ? { ...styleMap.focusedOrValuedInputLabel, top: labelTopOffset } : {})
     };
 
     const inputStyle = {

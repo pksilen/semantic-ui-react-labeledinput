@@ -30,6 +30,7 @@ describe('propTypes', () => {
     expect(propTypes.iconPosition).toBeTruthy();
     expect(propTypes.inputId).toBe(PropTypes.string.isRequired);
     expect(propTypes.label).toBe(PropTypes.string.isRequired);
+    expect(propTypes.labelTopOffset).toBe(PropTypes.string);
     expect(propTypes.maxLength).toBe(PropTypes.number);
     expect(propTypes.maxValue).toBe(PropTypes.number);
     expect(propTypes.minLength).toBe(PropTypes.number);
@@ -62,6 +63,7 @@ describe('defaultProps', () => {
     expect(lineInputWrapper.props().icon).toBe('');
     expect(lineInputWrapper.props().iconColor).toBe(undefined);
     expect(lineInputWrapper.props().iconPosition).toBe('right');
+    expect(lineInputWrapper.props().labelTopOffset).toBe('2px');
     expect(lineInputWrapper.props().maxLength).toBe(undefined);
     expect(lineInputWrapper.props().maxValue).toBe(undefined);
     expect(lineInputWrapper.props().minLength).toBe(undefined);
