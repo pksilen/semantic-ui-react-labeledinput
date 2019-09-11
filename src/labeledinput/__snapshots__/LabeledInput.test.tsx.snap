@@ -23,7 +23,7 @@ exports[`render() should render component with additional HTML attributes correc
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -68,7 +68,7 @@ exports[`render() should render component with errorTextPosition "right" correct
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -114,7 +114,7 @@ exports[`render() should render component with presentation "box" correctly 1`] 
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -160,7 +160,7 @@ exports[`render() should render component with presentation "line" correctly 1`]
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -212,7 +212,7 @@ exports[`render() should render disabled component correctly 1`] = `
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -258,7 +258,7 @@ exports[`render() should render focused component correctly 1`] = `
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -304,7 +304,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -356,7 +356,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
@@ -412,7 +412,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
           "lineHeight": "1.21428571em",
           "paddingLeft": "0.3em",
           "position": "absolute",
-          "top": 0,
+          "top": "2px",
           "transition": "top .2s cubic-bezier(.25, .8, .25, 1), font-size .2s cubic-bezier(.25, .8, .25, 1)",
         }
       }
