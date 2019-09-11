@@ -14,6 +14,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   allowEmptyValue: boolean;
   className?: string;
   countryCode: string;
+  creditCardNumber: string;
   disabled: boolean;
   focus: boolean;
   errorText: string;
@@ -49,6 +50,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     allowEmptyValue: PropTypes.bool,
     className: PropTypes.string,
     countryCode: PropTypes.string,
+    creditCardNumber: PropTypes.string,
     disabled: PropTypes.bool,
     focus: PropTypes.bool,
     errorText: PropTypes.string,
@@ -99,6 +101,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     allowEmptyValue: false,
     className: undefined,
     countryCode: '',
+    creditCardNumber: '',
     disabled: false,
     focus: false,
     errorText: '',
@@ -125,7 +128,16 @@ export default class LabeledInput extends React.Component<Props, {}> {
   };
 
   onInputBlur = (): void => {
-    const { allowEmptyValue, countryCode, maxValue, minLength, minValue, validation, value } = this.props;
+    const {
+      allowEmptyValue,
+      countryCode,
+      creditCardNumber,
+      maxValue,
+      minLength,
+      minValue,
+      validation,
+      value
+    } = this.props;
 
     this.setState({
       hasFocus: false
@@ -142,7 +154,8 @@ export default class LabeledInput extends React.Component<Props, {}> {
         minValue,
         maxValue,
         countryCode,
-        minLength
+        minLength,
+        creditCardNumber
       );
 
       this.setState({
@@ -318,6 +331,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     const {
       allowEmptyValue,
       countryCode,
+      creditCardNumber,
       disabled,
       focus,
       errorText,

@@ -18,6 +18,7 @@ const styleMap: { [key: string]: CSSProperties } = {
     top: 'calc(50% -  1.21428571em / 2 - 0.05em)',
   },
   lineInputLabel: {
+    paddingLeft: '0.5em',
     top: 'calc(70% -  1.21428571em / 2 - 0.3em)',
   },
   focusedOrValuedInputLabel: {

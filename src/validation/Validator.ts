@@ -19,9 +19,10 @@ export default class Validator {
     minValue?: number,
     maxValue?: number,
     suppliedCountryCode?: string,
-    minLength?: number
+    minLength?: number,
+    creditCardNumber?: string
   ): boolean {
-    if (minLength !== undefined && valueString.length < minLength)  {
+    if (minLength !== undefined && valueString.length < minLength) {
       return false;
     }
 
@@ -58,13 +59,15 @@ export default class Validator {
         return is.email(valueString);
 
       case 'creditCardNumber':
-        return is.creditCard(valueString.replace(/\s/g, ''));
+        return cardsy.validate.number(valueString.replace(/\s/g, ''));
 
       case 'creditCardExpiration':
         return cardsy.validate.expiryString(valueString);
 
       case 'creditCardVerificationCode':
-        return !!valueString.match(/^\d{3,4}$/);
+        return creditCardNumber
+          ? cardsy.validate.cvc(valueString, cardsy.getType(creditCardNumber.replace(/\s/g, '')))
+          : !!valueString.match(/^\d{3,4}$/);
 
       case 'number':
       case 'integer':

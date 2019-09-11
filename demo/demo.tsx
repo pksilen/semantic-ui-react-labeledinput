@@ -1,272 +1,394 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import LineInput from '../src/lineinput/LineInput';
+import { CheckboxProps, Form, Radio } from 'semantic-ui-react';
+import LabeledInput from '../src/labeledinput/LabeledInput';
 
 interface State {
   values: string[];
+  errorTextPosition: 'bottom' | 'right';
+  presentation: 'box' | 'line';
 }
 
 class DemoApp extends React.Component<{}, State> {
   // noinspection MagicNumberJS
   state: State = {
-    values: Array(26).fill('')
+    values: Array(24).fill(''),
+    errorTextPosition: 'bottom',
+    presentation: 'box'
   };
 
-  changeValue = (newValue: string, componentIndex: number) => {
+  changeValue = (newValue: string, componentIndex: number): void => {
     this.setState(
       (prevState: State): State => {
         const { values } = prevState;
         values[componentIndex] = newValue;
 
         return {
+          ...prevState,
           values
         };
       }
     );
   };
 
+  changePresentation = (event: React.FormEvent<HTMLInputElement>, { value }: CheckboxProps): void => {
+    const presentation = value as 'box' | 'line';
+    this.setState(
+      (prevState: State): State => ({
+        ...prevState,
+        presentation
+      })
+    );
+  };
+
+  changeErrorTextPosition = (event: React.FormEvent<HTMLInputElement>, { value }: CheckboxProps): void => {
+    const errorTextPosition = value as 'bottom' | 'right';
+    this.setState(
+      (prevState: State): State => ({
+        ...prevState,
+        errorTextPosition
+      })
+    );
+  };
+
   render(): React.ReactElement {
-    const { values } = this.state;
+    const { errorTextPosition, presentation, values } = this.state;
 
     // noinspection MagicNumberJS
     return (
       <div style={{ marginLeft: '5px' }}>
         <h1>Demo</h1>
-        <h2>LineInput</h2>
-        LineInput without validation
-        <LineInput
-          placeholder="Enter value..."
+        <Form>
+          <p>Presentation</p>
+          <Form.Field>
+            <Radio
+              label="box"
+              name="presentation"
+              value="box"
+              checked={presentation === 'box'}
+              onChange={this.changePresentation}
+            />
+          </Form.Field>
+          <Form.Field>
+            <Radio
+              label="line"
+              name="presentation"
+              value="line"
+              checked={presentation === 'line'}
+              onChange={this.changePresentation}
+            />
+          </Form.Field>
+          <br />
+          <p>Error text position</p>
+          <Form.Field>
+            <Radio
+              label="bottom"
+              name="errorTextPosition"
+              value="bottom"
+              checked={errorTextPosition === 'bottom'}
+              onChange={this.changeErrorTextPosition}
+            />
+          </Form.Field>
+          <Form.Field>
+            <Radio
+              label="right"
+              name="errorTextPosition"
+              value="right"
+              checked={errorTextPosition === 'right'}
+              onChange={this.changeErrorTextPosition}
+            />
+          </Form.Field>
+        </Form>
+        <h2>LabeledInput</h2>
+        LabeledInput without validation
+        <LabeledInput
+          inputId="input0"
+          label="Value"
+          presentation={presentation}
           value={values[0]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 0)}
         />
         <br />
-        LineInput with URL validation
-        <LineInput
-          placeholder="Enter URL..."
+        LabeledInput with URL validation
+        <LabeledInput
+          inputId="input1"
+          label="URL"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a valid URL"
           validation="url"
           value={values[1]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 1)}
         />
         <br />
-        LineInput with e-mail address validation
-        <LineInput
-          placeholder="Enter e-mail address..."
+        LabeledInput with e-mail address validation
+        <LabeledInput
+          inputId="input2"
+          label="E-mail address"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a valid e-mail address"
           validation="emailAddress"
           value={values[2]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 2)}
         />
         <br />
-        LineInput with credit card number validation
-        <LineInput
-          placeholder="Enter credit card number..."
+        LabeledInput with credit card number validation
+        <LabeledInput
+          inputId="input3"
+          label="Credit card number"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a valid credit card number"
           validation="creditCardNumber"
           value={values[3]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 3)}
         />
         <br />
-        LineInput with credit card expiration validation
-        <LineInput
-          placeholder="Enter credit card expiration..."
+        LabeledInput with credit card expiration validation
+        <LabeledInput
+          inputId="input4"
+          label="MM / YY"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a valid credit card expiration"
           validation="creditCardExpiration"
           value={values[4]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 4)}
         />
         <br />
-        LineInput with credit card verification code validation
-        <LineInput
-          placeholder="Enter CVC..."
+        LabeledInput with credit card verification code validation
+        <LabeledInput
+          inputId="input5"
+          label="CVC"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a valid CVC"
           validation="creditCardVerificationCode"
           value={values[5]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 5)}
         />
         <br />
-        LineInput with number validation
-        <LineInput
-          placeholder="Enter a number..."
+        LabeledInput with number validation
+        <LabeledInput
+          inputId="input6"
+          label="Number"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a number"
           validation="number"
           value={values[6]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 6)}
         />
         <br />
-        LineInput with integer validation
-        <LineInput
-          placeholder="Enter an integer..."
+        LabeledInput with integer validation
+        <LabeledInput
+          inputId="input7"
+          label="Integer"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be an integer"
           validation="integer"
           value={values[7]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 7)}
         />
         <br />
-        LineInput with alphaNumeric validation
-        <LineInput
-          placeholder="Enter alpha numeric value..."
+        LabeledInput with alphaNumeric validation
+        <LabeledInput
+          inputId="input8"
+          label="AlphaNumeric"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be alphanumeric"
           validation="alphaNumeric"
           value={values[8]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 8)}
         />
         <br />
-        LineInput with US ZIP code validation
-        <LineInput
-          placeholder="Enter US ZIP code..."
+        LabeledInput with US ZIP code validation
+        <LabeledInput
+          inputId="input9"
+          label="US ZIP"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a US ZIP code"
           validation="usZipCode"
           value={values[9]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 9)}
         />
         <br />
-        LineInput with Canadian postal code validation
-        <LineInput
-          placeholder="Enter CA postal code..."
+        LabeledInput with Canadian postal code validation
+        <LabeledInput
+          inputId="input10"
+          label="CA postal code"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a CA postal code"
           validation="caPostCode"
           value={values[10]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 10)}
         />
         <br />
-        LineInput with UK postal code validation
-        <LineInput
-          placeholder="Enter UK postal code..."
+        LabeledInput with UK postal code validation
+        <LabeledInput
+          inputId="input11"
+          label="UK postal code"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a UK postal code"
           validation="ukPostCode"
           value={values[11]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 11)}
         />
         <br />
-        LineInput with phone number validation
-        <LineInput
-          placeholder="Enter a phone number..."
+        LabeledInput with phone number validation
+        <LabeledInput
+          inputId="input12"
+          label="Phone number"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a phone number"
           validation="phoneNumber"
           value={values[12]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 12)}
         />
         <br />
-        LineInput with US social security number validation
-        <LineInput
-          placeholder="Enter US SSN..."
+        LabeledInput with US social security number validation
+        <LabeledInput
+          inputId="input13"
+          label="US SSN"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a US SSN"
           validation="usSSN"
           value={values[13]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 13)}
         />
         <br />
-        LineInput with IP address validation
-        <LineInput
-          placeholder="Enter IP address..."
+        LabeledInput with IP address validation
+        <LabeledInput
+          inputId="input14"
+          label="IP address"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be an IP address"
           validation="ipAddress"
           value={values[14]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 14)}
         />
         <br />
-        LineInput with IPv4 address validation
-        <LineInput
-          placeholder="Enter an IPv4 address..."
+        LabeledInput with IPv4 address validation
+        <LabeledInput
+          inputId="input15"
+          label="IPv4 address"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be an IPv4 address"
           validation="ipv4Address"
           value={values[15]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 15)}
         />
         <br />
-        LineInput with IPv6 address validation
-        <LineInput
-          placeholder="Enter an IPv6 address..."
+        LabeledInput with IPv6 address validation
+        <LabeledInput
+          inputId="input16"
+          label="IPv6 address"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be an IPv6 address"
           validation="ipv6Address"
           value={values[16]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 16)}
         />
         <br />
-        LineInput with hex color validation
-        <LineInput
-          placeholder="Enter a hex color..."
+        LabeledInput with hex color validation
+        <LabeledInput
+          inputId="input17"
+          label="Hex color"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           errorText="Must be a hex color"
           validation="hexColor"
           value={values[17]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 17)}
         />
         <br />
-        LineInput with icon
-        <LineInput
-          placeholder="Search..."
+        LabeledInput with icon
+        <LabeledInput
+          inputId="input18"
+          label="Search..."
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           icon="search"
           value={values[18]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 18)}
         />
         <br />
-        LineInput with validation icons
-        <LineInput
-          placeholder="Enter number..."
+        LabeledInput with validation icons
+        <LabeledInput
+          inputId="input19"
+          label="Number"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
           validation="number"
           validationErrorIcon="exclamation"
           validationSuccessIcon="check"
           errorText="Must be a number"
-          errorTextPosition="bottom"
           value={values[19]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 19)}
         />
         <br />
         <br />
         <h2>Sizes</h2>
-        Mini
-        <LineInput
-          placeholder="Enter a value..."
-          size="mini"
+        <br />
+        Large
+        <LabeledInput
+          inputId="input20"
+          label="Enter value"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
+          size="large"
           value={values[20]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 20)}
         />
         <br />
-        Small
-        <LineInput
-          placeholder="Enter a value..."
-          size="small"
+        Big
+        <LabeledInput
+          inputId="input21"
+          label="Enter value"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
+          size="big"
           value={values[21]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 21)}
         />
         <br />
-        Large
-        <LineInput
-          placeholder="Enter a value..."
-          size="large"
+        Huge
+        <LabeledInput
+          inputId="input22"
+          label="Enter value"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
+          size="huge"
           value={values[22]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 22)}
         />
         <br />
-        Big
-        <LineInput
-          placeholder="Enter a value..."
-          size="big"
+        Massive
+        <LabeledInput
+          inputId="input23"
+          label="Enter value"
+          errorTextPosition={errorTextPosition}
+          presentation={presentation}
+          size="massive"
           value={values[23]}
           onValueChange={(newValue: string) => this.changeValue(newValue, 23)}
-        />
-        <br />
-        Huge
-        <LineInput
-          placeholder="Enter a value..."
-          size="huge"
-          value={values[24]}
-          onValueChange={(newValue: string) => this.changeValue(newValue, 24)}
-        />
-        <br />
-        Massive
-        <LineInput
-          placeholder="Enter a value..."
-          size="massive"
-          value={values[25]}
-          onValueChange={(newValue: string) => this.changeValue(newValue, 25)}
         />
         <p>
           <br />
         </p>
-        <a href="https://github.com/pksilen/semantic-ui-react-lineinput">
-          View semantic-ui-react-lineinput on GitHub
+        <a href="https://github.com/pksilen/semantic-ui-react-labeledinput">
+          View semantic-ui-react-labeledinput on GitHub
         </a>
       </div>
     );

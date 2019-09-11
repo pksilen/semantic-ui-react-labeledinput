@@ -20,6 +20,7 @@ describe('propTypes', () => {
     expect(propTypes.allowEmptyValue).toBe(PropTypes.bool);
     expect(propTypes.className).toBe(PropTypes.string);
     expect(propTypes.countryCode).toBe(PropTypes.string);
+    expect(propTypes.creditCardNumber).toBe(PropTypes.string);
     expect(propTypes.disabled).toBe(PropTypes.bool);
     expect(propTypes.focus).toBe(PropTypes.bool);
     expect(propTypes.errorText).toBe(PropTypes.string);
@@ -53,6 +54,7 @@ describe('defaultProps', () => {
     expect(lineInputWrapper.props().allowEmptyValue).toBe(false);
     expect(lineInputWrapper.props().className).toBe(undefined);
     expect(lineInputWrapper.props().countryCode).toBe('');
+    expect(lineInputWrapper.props().creditCardNumber).toBe('');
     expect(lineInputWrapper.props().disabled).toBe(false);
     expect(lineInputWrapper.props().focus).toBe(false);
     expect(lineInputWrapper.props().errorText).toBe('');

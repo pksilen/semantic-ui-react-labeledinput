@@ -105,7 +105,9 @@ LabeledInput with list of allowed values validation (case sensitive)
 | allowEmptyValue           | Specifies if empty value for input is allowed                                                                                                                      |
 | className                 | class names for outer div                                                                                                                                          |
 | countryCode               | Default country code ISO 3166-1 Alpha-2 code for phone number validation, if not supplied, browser's country code is used                                          |
-| disabled                  | Specified if input is enabled or disabled                                                                                                                          |
+| creditCardNumber          | Credit card number to be used for CVC validation                                                                                                                   |
+| disabled                  | Specifies if input is enabled or disabled                                                                                                                          |
+| focus                     | Specifies if input has initially focus style                                                                                                                       |
 | errorText                 | Text shown if validation fails                                                                                                                                     |
 | errorTextPosition         | Position where error text is shown                                                                                                                                 |
 | icon                      | Name of Semantic UI icon to be shown in input, is overridden by validationErrorIcon or validationSuccessIcon, has no effect for validation type 'creditCardNumber  |
@@ -127,7 +129,9 @@ LabeledInput with list of allowed values validation (case sensitive)
     allowEmptyValue: boolean,
     className: string,  
     countryCode: string,
+    creditCardNumber: string,
     disabled: boolean,
+    focus: boolean,
     errorText: string,
     errorTextPosition: 'bottom' | 'right',
     icon: string,
@@ -146,7 +150,9 @@ LabeledInput with list of allowed values validation (case sensitive)
     allowEmptyValue: false,
     className: undefined,
     countryCode: '',
+    creditCardNumber: '',
     disabled: false,
+    focus: false,
     errorText: '',
     errorTextPosition: 'bottom',
     icon: '',
