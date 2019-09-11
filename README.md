@@ -28,6 +28,7 @@ Input control with integrated label and validation support for [Semantic UI Reac
 
 ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/line_validation_example2.png)
 
+
 ## Prerequisites
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
