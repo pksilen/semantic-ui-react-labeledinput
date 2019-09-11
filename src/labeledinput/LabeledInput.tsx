@@ -21,7 +21,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   errorTextPosition: 'bottom' | 'right';
   icon: SemanticICONS;
   iconColor: SemanticCOLORS;
-  iconPosition: 'right';
+  iconPosition: 'left' | 'right';
   inputId: string;
   label: string;
   maxLength?: number;
@@ -57,7 +57,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     errorTextPosition: PropTypes.oneOf(['bottom', 'right']),
     icon: PropTypes.string,
     iconColor: PropTypes.string,
-    iconPosition: PropTypes.oneOf(['right']),
+    iconPosition: PropTypes.oneOf(['left', 'right']),
     inputId: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     maxLength: PropTypes.number,
@@ -282,20 +282,21 @@ export default class LabeledInput extends React.Component<Props, {}> {
     const {
       disabled,
       focus,
-      iconPosition,
       presentation,
       size,
-      validationErrorIcon,
-      validationSuccessIcon
+      validation,
+      value
     } = this.props;
     const { hasValidValue } = this.state;
 
     let className = `ui input ${size}`;
 
     if (this.hasIcon()) {
-      className = `${className} ${
-        validationErrorIcon || validationSuccessIcon ? 'right' : iconPosition
-      } icon`;
+      if (validation === 'creditCardNumber' && value) {
+        className = `${className} 'left icon`;
+      } else {
+        className = `${className} 'right icon`;
+      }
     }
 
     if (disabled) {

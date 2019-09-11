@@ -101,6 +101,7 @@ class DemoApp extends React.Component<{}, State> {
         </Form>
         <h2>LabeledInput</h2>
         LabeledInput without validation
+        <br />
         <LabeledInput
           inputId="input0"
           label="Value"
@@ -111,6 +112,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with URL validation
+        <br />
         <LabeledInput
           inputId="input1"
           label="URL"
@@ -124,6 +126,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with e-mail address validation
+        <br />
         <LabeledInput
           inputId="input2"
           label="E-mail address"
@@ -137,6 +140,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with credit card number validation
+        <br />
         <LabeledInput
           inputId="input3"
           label="Credit card number"
@@ -150,6 +154,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with credit card expiration validation
+        <br />
         <LabeledInput
           inputId="input4"
           label="MM / YY"
@@ -163,6 +168,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with credit card verification code validation
+        <br />
         <LabeledInput
           inputId="input5"
           label="CVC"
@@ -176,6 +182,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with number validation
+        <br />
         <LabeledInput
           inputId="input6"
           label="Number"
@@ -187,7 +194,9 @@ class DemoApp extends React.Component<{}, State> {
           onValueChange={(newValue: string) => this.changeValue(newValue, 6)}
         />
         <br />
+        <br />
         LabeledInput with integer validation
+        <br />
         <LabeledInput
           inputId="input7"
           label="Integer"
@@ -201,6 +210,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with alphaNumeric validation
+        <br />
         <LabeledInput
           inputId="input8"
           label="AlphaNumeric"
@@ -214,6 +224,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with US ZIP code validation
+        <br />
         <LabeledInput
           inputId="input9"
           label="US ZIP"
@@ -227,6 +238,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with Canadian postal code validation
+        <br />
         <LabeledInput
           inputId="input10"
           label="CA postal code"
@@ -240,6 +252,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with UK postal code validation
+        <br />
         <LabeledInput
           inputId="input11"
           label="UK postal code"
@@ -253,6 +266,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with phone number validation
+        <br />
         <LabeledInput
           inputId="input12"
           label="Phone number"
@@ -266,6 +280,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with US social security number validation
+        <br />
         <LabeledInput
           inputId="input13"
           label="US SSN"
@@ -279,6 +294,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with IP address validation
+        <br />
         <LabeledInput
           inputId="input14"
           label="IP address"
@@ -292,6 +308,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with IPv4 address validation
+        <br />
         <LabeledInput
           inputId="input15"
           label="IPv4 address"
@@ -305,6 +322,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with IPv6 address validation
+        <br />
         <LabeledInput
           inputId="input16"
           label="IPv6 address"
@@ -318,6 +336,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with hex color validation
+        <br />
         <LabeledInput
           inputId="input17"
           label="Hex color"
@@ -331,6 +350,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with icon
+        <br />
         <LabeledInput
           inputId="input18"
           label="Search..."
@@ -343,6 +363,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         LabeledInput with validation icons
+        <br />
         <LabeledInput
           inputId="input19"
           label="Number"
@@ -360,6 +381,7 @@ class DemoApp extends React.Component<{}, State> {
         <h2>Sizes</h2>
         <br />
         Large
+        <br />
         <LabeledInput
           inputId="input20"
           label="Enter value"
@@ -372,6 +394,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         Big
+        <br />
         <LabeledInput
           inputId="input21"
           label="Enter value"
@@ -384,6 +407,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         Huge
+        <br />
         <LabeledInput
           inputId="input22"
           label="Enter value"
@@ -396,6 +420,7 @@ class DemoApp extends React.Component<{}, State> {
         <br />
         <br />
         Massive
+        <br />
         <LabeledInput
           inputId="input23"
           label="Enter value"
