@@ -16,9 +16,9 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   countryCode: string;
   creditCardNumber: string;
   disabled: boolean;
-  focus: boolean;
   errorText: string;
   errorTextPosition: 'bottom' | 'right';
+  focus: boolean;
   icon: SemanticICONS;
   iconColor: SemanticCOLORS;
   iconPosition: 'left' | 'right';
@@ -52,9 +52,9 @@ export default class LabeledInput extends React.Component<Props, {}> {
     countryCode: PropTypes.string,
     creditCardNumber: PropTypes.string,
     disabled: PropTypes.bool,
-    focus: PropTypes.bool,
     errorText: PropTypes.string,
     errorTextPosition: PropTypes.oneOf(['bottom', 'right']),
+    focus: PropTypes.bool,
     icon: PropTypes.string,
     iconColor: PropTypes.string,
     iconPosition: PropTypes.oneOf(['left', 'right']),
@@ -103,9 +103,9 @@ export default class LabeledInput extends React.Component<Props, {}> {
     countryCode: '',
     creditCardNumber: '',
     disabled: false,
-    focus: false,
     errorText: '',
     errorTextPosition: 'bottom',
+    focus: PropTypes.bool,
     icon: '',
     iconColor: undefined,
     iconPosition: 'right',
