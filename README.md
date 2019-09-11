@@ -108,9 +108,9 @@ LabeledInput with list of allowed values validation (case sensitive)
 | countryCode               | Default country code ISO 3166-1 Alpha-2 code for phone number validation, if not supplied, browser's country code is used                                          |
 | creditCardNumber          | Credit card number to be used for CVC validation                                                                                                                   |
 | disabled                  | Specifies if input is enabled or disabled                                                                                                                          |
-| focus                     | Specifies if input has initially focus style                                                                                                                       |
 | errorText                 | Text shown if validation fails                                                                                                                                     |
 | errorTextPosition         | Position where error text is shown                                                                                                                                 |
+| focus                     | Specifies if input has initially focus style                                                                                                                       |
 | icon                      | Name of Semantic UI icon to be shown in input, is overridden by validationErrorIcon or validationSuccessIcon, has no effect for validation type 'creditCardNumber  |
 | iconColor                 | Color for icon (red, orange, yellow, olive, green, teal, blue, violet, purple, pink, brown, grey, black                                                            |
 | iconPosition              | Position where the icon is shown                                                                                                                                   |
@@ -132,9 +132,9 @@ LabeledInput with list of allowed values validation (case sensitive)
     countryCode: string,
     creditCardNumber: string,
     disabled: boolean,
-    focus: boolean,
     errorText: string,
     errorTextPosition: 'bottom' | 'right',
+    focus: boolean,
     icon: string,
     iconColor: string,
     iconPosition: 'right',
@@ -153,9 +153,9 @@ LabeledInput with list of allowed values validation (case sensitive)
     countryCode: '',
     creditCardNumber: '',
     disabled: false,
-    focus: false,
     errorText: '',
     errorTextPosition: 'bottom',
+    focus: false,
     icon: '',
     iconColor: undefined,
     iconPosition: 'right',
