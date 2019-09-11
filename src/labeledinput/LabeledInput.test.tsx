@@ -21,6 +21,7 @@ describe('propTypes', () => {
     expect(propTypes.className).toBe(PropTypes.string);
     expect(propTypes.countryCode).toBe(PropTypes.string);
     expect(propTypes.disabled).toBe(PropTypes.bool);
+    expect(propTypes.focus).toBe(PropTypes.bool);
     expect(propTypes.errorText).toBe(PropTypes.string);
     expect(propTypes.errorTextPosition).toBeTruthy();
     expect(propTypes.icon).toBe(PropTypes.string);
@@ -53,6 +54,7 @@ describe('defaultProps', () => {
     expect(lineInputWrapper.props().className).toBe(undefined);
     expect(lineInputWrapper.props().countryCode).toBe('');
     expect(lineInputWrapper.props().disabled).toBe(false);
+    expect(lineInputWrapper.props().focus).toBe(false);
     expect(lineInputWrapper.props().errorText).toBe('');
     expect(lineInputWrapper.props().errorTextPosition).toBe('bottom');
     expect(lineInputWrapper.props().icon).toBe('');
@@ -571,7 +573,15 @@ describe('render()', () => {
 
   it('should render disabled component correctly', () => {
     const lineInputWrapper = renderShallow(
-      <LabeledInput inputId="input1" label="Value" disabled onValueChange={onValueChangeMock} value="abc" />
+      <LabeledInput disabled inputId="input1" label="Value" onValueChange={onValueChangeMock} value="abc" />
+    );
+
+    expect(lineInputWrapper).toMatchSnapshot();
+  });
+
+  it('should render focused component correctly', () => {
+    const lineInputWrapper = renderShallow(
+      <LabeledInput focus inputId="input1" label="Value" onValueChange={onValueChangeMock} value="abc" />
     );
 
     expect(lineInputWrapper).toMatchSnapshot();

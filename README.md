@@ -94,7 +94,7 @@ LabeledInput with list of allowed values validation (case sensitive)
     <LabeledInput inputId="input1" label="Enter value" validation={allowedValues} value={this.state.value} onValueChange={this.changeValue} />
    
 ## Mandatory properties      
-    inputId: string,
+    inputId: string,  // Each input must to have a unique id
     label: string,
     value: string, 
     onValueChange: (newValue: string) => void,
@@ -138,7 +138,7 @@ LabeledInput with list of allowed values validation (case sensitive)
     minLength: number,
     minValue: number,
     presentation: 'box' | 'line',
-    size: 'mini' | 'small' | 'large' | 'big' | 'huge' | 'massive',
+    size: 'large' | 'big' | 'huge' | 'massive',
     type: string,
     validation: RegExp | string[] | (inputString: string) => boolean | 'url' | 'emailAddress' | 'creditCardNumber' | 'creditCardExpiration' | 'creditCardVerificationCode' | 'number' | 'integer' | 'alphaNumeric' | 'usZipCode' | 'caPostCode' | 'ukPostCode' | 'phoneNumber' | 'usSSN' | 'ipAddress' | 'ipv4Address' | 'ipv6Address' | 'hexColor'
         
@@ -157,39 +157,49 @@ LabeledInput with list of allowed values validation (case sensitive)
     minLength: undefined,
     minValue: undefined,
     presentation: 'box',
-    size: 'small',
+    size: 'huge',
     type: undefined,
     validation: undefined
     
 ## Styling example
-   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/styled_example.png) 
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example1.png) 
    
-   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-lineinput/master/example/styled_example2.png)
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example2.png)
+   
+   ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example3.png)
     
    styles.css
    
-       .expiration {
-         margin-left: 0.5em;
-       }
+    .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
+      font-size: 0.9em;
+    }
        
-       .expiration input {
-         width: 4.9em;
-       }
+    .creditCardNumber input {
+      width: 14em;
+    }
        
-       .cvc {
-         margin-left: 0.5em;
-       }
+    .creditCardExpiration {
+      margin-left: 0.5em;
+    }
        
-       .cvc input {
-         margin-left: 0.5em;
-         width: 3.5em;
-       }
+    .creditCardExpiration input {
+      width: 6em;
+    }
+       
+    .cvc {
+      margin-left: 0.5em;
+    }
+       
+    .cvc input {
+      margin-left: 0.5em;
+      width: 4.5em;
+    }
    
    Applying CSS using className
        
-       <LabeledInput size="huge" placeholder="Enter credit card number..." errorText="must be a valid credit card number" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
-       <LabeledInput className="expiration" size="huge" placeholder="MM / YY" errorText="must be a MM / YY" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
-       <LabeledInput className="cvc" size="huge" placeholder="CVC" errorText="must be a CVC" validation="creditCardVerificationCode" onValueChange={this.changeCVCValue} value={cvc}/>
+    <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="box" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+    <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+    <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="box" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
 
 ## License
 MIT License

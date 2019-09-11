@@ -15,7 +15,7 @@ const styleMap: { [key: string]: CSSProperties } = {
   },
   boxInputLabel: {
     paddingLeft: '1em',
-    top: 'calc(50% -  1.21428571em / 2)',
+    top: 'calc(50% -  1.21428571em / 2 - 0.05em)',
   },
   lineInputLabel: {
     top: 'calc(70% -  1.21428571em / 2 - 0.3em)',
@@ -42,6 +42,11 @@ const styleMap: { [key: string]: CSSProperties } = {
   },
   validationIcon: {
     opacity: 1
+  },
+  leftIcon: {
+    bottom: 'calc(0.4071em + 0.05em)',
+    height: '1em',
+    top: 'auto'
   },
   errorLabel: {
     background: 'none',

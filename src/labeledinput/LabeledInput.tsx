@@ -15,6 +15,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   countryCode: string;
   disabled: boolean;
+  focus: boolean;
   errorText: string;
   errorTextPosition: 'bottom' | 'right';
   icon: SemanticICONS;
@@ -49,6 +50,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     className: PropTypes.string,
     countryCode: PropTypes.string,
     disabled: PropTypes.bool,
+    focus: PropTypes.bool,
     errorText: PropTypes.string,
     errorTextPosition: PropTypes.oneOf(['bottom', 'right']),
     icon: PropTypes.string,
@@ -98,6 +100,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
     className: undefined,
     countryCode: '',
     disabled: false,
+    focus: false,
     errorText: '',
     errorTextPosition: 'bottom',
     icon: '',
@@ -265,6 +268,7 @@ export default class LabeledInput extends React.Component<Props, {}> {
   getClassName = (): string => {
     const {
       disabled,
+      focus,
       iconPosition,
       presentation,
       size,
@@ -285,6 +289,10 @@ export default class LabeledInput extends React.Component<Props, {}> {
       className = `${className} disabled`;
     }
 
+    if (focus) {
+      className = `${className} focus`;
+    }
+
     if (!hasValidValue && presentation === 'box') {
       className = `${className} error`;
     }
@@ -292,11 +300,26 @@ export default class LabeledInput extends React.Component<Props, {}> {
     return className;
   };
 
+  getIconStyle = (): React.CSSProperties => {
+    const { iconPosition, validationErrorIcon, validationSuccessIcon } = this.props;
+
+    if (validationErrorIcon || validationSuccessIcon) {
+      return styleMap.validationIcon;
+    }
+
+    if (iconPosition === 'left') {
+      return styleMap.leftIcon;
+    }
+
+    return {};
+  };
+
   render(): React.ReactElement {
     const {
       allowEmptyValue,
       countryCode,
       disabled,
+      focus,
       errorText,
       errorTextPosition,
       icon,
@@ -344,8 +367,6 @@ export default class LabeledInput extends React.Component<Props, {}> {
       ...(errorTextPosition === 'right' ? styleMap.rightErrorLabel : {})
     };
 
-    const iconStyle = validationErrorIcon || validationSuccessIcon ? styleMap.validationIcon : {};
-
     // eslint-disable-next-line react/jsx-props-no-spreading
     return (
       <div style={topDivStyle} {...restOfProps}>
@@ -364,13 +385,13 @@ export default class LabeledInput extends React.Component<Props, {}> {
             value={value}
           />
           {this.hasIcon() ? (
-            <Icon color={this.getIconColor()} name={this.getIconName()} style={iconStyle} />
+            <Icon color={this.getIconColor()} name={this.getIconName()} style={this.getIconStyle()} />
           ) : (
             undefined
           )}
         </div>
         {!hasValidValue && errorText ? (
-          <div className={`ui label ${size}`} style={errorLabelStyle}>
+          <div className={`ui label errorLabel ${size}`} style={errorLabelStyle}>
             {errorText}
           </div>
         ) : (
