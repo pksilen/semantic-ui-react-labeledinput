@@ -274,8 +274,8 @@ Credit card number must pass Luhn check
 Credit card expiration is supported in format 'MM / YY'
 
 Credit card verification code (CVC) can validated with two options
-* Without credit card number, it must be 3-4 digits
-* With credit card number, it must be 3-4 digits depending on the supplied credit card type
+* Without credit card number: it must be 3-4 digits
+* With credit card number: it must be 3-4 digits depending on the supplied credit card type
 
 ## License
 MIT License
