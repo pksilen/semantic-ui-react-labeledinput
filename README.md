@@ -259,13 +259,13 @@ LabeledInput with list of allowed values validation (case sensitive)
 Supported cards
 * American Express
 * Dankort
-* Dinersclub
+* Diners Club
 * Discover
 * JCB
 * Laser
 * Maestro
-* Mastercard
-* Unionpay
+* MasterCard
+* UnionPay
 * Visa
 * Visa Electron
 
