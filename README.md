@@ -254,7 +254,29 @@ LabeledInput with list of allowed values validation (case sensitive)
     <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
     <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
     <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
- 
+
+## Credit card validations
+Supported cards
+* American Express
+* Dankort
+* Dinersclub
+* Discover
+* JCB
+* Laser
+* Maestro
+* Mastercard
+* Unionpay
+* Visa
+* Visa Electron
+
+Credit card number must pass Luhn check
+
+Credit card expiration is supported in format 'MM / YY'
+
+Credit card verification code (CVC) can validated with two options
+* Without credit card number, it must be 3-4 digits
+* With credit card number, it must be 3-4 digits depending on the supplied credit card type
+
 ## License
 MIT License
 
