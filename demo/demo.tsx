@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { CheckboxProps, Form, Radio } from 'semantic-ui-react';
 import LabeledInput from '../src/labeledinput/LabeledInput';

@@ -42,7 +42,7 @@ Input control with integrated label and validation support for [Semantic UI Reac
    
 ## Example usage
     import React from 'react';
-    import { LabeledInput } from 'semantic-ui-react-labeledinput';
+    import LabeledInput from 'semantic-ui-react-labeledinput';
     
     class LabeledInputExample extends React.Component {
 
@@ -93,6 +93,8 @@ LabeledInput with list of allowed values validation (case sensitive)
        
     const allowedValues = ['value1', 'value2', 'value3'];
     <LabeledInput inputId="input1" label="Enter value" validation={allowedValues} value={this.state.value} onValueChange={this.changeValue} />
+    
+More examples can be found in demo/demo.tsx file
    
 ## Mandatory properties      
     inputId: string,  // Each input must to have a unique id
