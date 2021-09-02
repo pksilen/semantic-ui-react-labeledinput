@@ -167,26 +167,26 @@ More examples can be found in `demo/demo.tsx` file
         
 ## Default values for optional properties
 ```js
- allowEmptyValue: false,
- className: undefined,
- countryCode: '',
- creditCardNumber: '',
- disabled: false,
- errorText: '',
- errorTextPosition: 'bottom',
- focus: false,
- icon: '',
- iconColor: undefined,
- iconPosition: 'right',
- maxLength: undefined,
- maxValue: undefined,
- minLength: undefined,
- minValue: undefined,
- presentation: 'box',
- size: 'huge',
- type: undefined,
- validation: undefined
- ```
+allowEmptyValue: false,
+className: undefined,
+countryCode: '',
+creditCardNumber: '',
+disabled: false,
+errorText: '',
+errorTextPosition: 'bottom',
+focus: false,
+icon: '',
+iconColor: undefined,
+iconPosition: 'right',
+maxLength: undefined,
+maxValue: undefined,
+minLength: undefined,
+minValue: undefined,
+presentation: 'box',
+size: 'huge',
+type: undefined,
+validation: undefined
+```
     
 ## Class names  
 | Class name       | Description                                                                                                                                                                      |
