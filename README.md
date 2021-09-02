@@ -4,6 +4,7 @@ Input control with integrated label and validation support for [Semantic UI Reac
 
 [![version][version-badge]][package]
 [![build][build]][circleci]
+[![Downloads][downloads]][package]
 [![coverage][coverage]][codecov]
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pksilen_semantic-ui-react-labeledinput&metric=alert_status)][sonarcloud]
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=pksilen_semantic-ui-react-labeledinput&metric=bugs)][sonarcloud]
@@ -41,7 +42,7 @@ Input control with integrated label and validation support for [Semantic UI Reac
    LabeledInput [demo] 
    
 ## Example usage
-```js
+```jsx
 import React from 'react';
 import LabeledInput from 'semantic-ui-react-labeledinput';
 
@@ -66,33 +67,33 @@ class LabeledInputExample extends React.Component {
 
 LabeledInput with box presentation (default presentation mode)
 
-```js
+```jsx
 <LabeledInput inputId="address" label="Address" presentation="box" value={this.state.value} onValueChange={this.changeValue} />
 ```
     
 LabeledInput with line presentation
 
-```js
+```jsx
 <LabeledInput inputId="address" label="Address" presentation="line" value={this.state.value} onValueChange={this.changeValue} />
 ```
     
 LabeledInput with predefined validations
 
-```js
+```jsx
 <LabeledInput errorText="value must be an integer" inputId="input1" label="Age" validation="integer" value={this.state.value} onValueChange={this.changeValue} />             
 <LabeledInput errorText="Invalid e-mail address" inputId="input2" label="E-mail address" validation="emailAddress" value={this.state.value} onValueChange={this.changeValue} />
 ```
     
 LabeledInput with regular expression validation
 
-```js     
+```jsx   
 const regExp = /^\d{3,4}$/;
 <LabeledInput inputId="input1" label="CVC" validation={regExp} value={this.state.value} onValueChange={this.changeValue} />
 ```
      
 LabeledInput with validation function
 
-```js
+```jsx
 const isEvenNumber = (valueStr) => {
   const value = parseInt(valueStr, 10);
   return value % 2 === 0;
@@ -103,7 +104,7 @@ const isEvenNumber = (valueStr) => {
 
 LabeledInput with list of allowed values validation (case sensitive)
 
-```js
+```jsx
 const allowedValues = ['value1', 'value2', 'value3'];
 <LabeledInput inputId="input1" label="Enter value" validation={allowedValues} value={this.state.value} onValueChange={this.changeValue} />
 ```
@@ -312,6 +313,7 @@ MIT License
 [license]: https://github.com/pksilen/semantic-ui-react-labeledinput/blob/master/LICENSE
 [version-badge]: https://img.shields.io/npm/v/semantic-ui-react-labeledinput.svg?style=flat-square
 [package]: https://www.npmjs.com/package/semantic-ui-react-labeledinput
+[downloads]: https://img.shields.io/npm/dm/semantic-ui-react-labeledinput
 [build]: https://img.shields.io/circleci/project/github/pksilen/semantic-ui-react-labeledinput/master.svg?style=flat-square
 [circleci]: https://circleci.com/gh/pksilen/semantic-ui-react-labeledinput/tree/master
 [coverage]: https://img.shields.io/codecov/c/github/pksilen/semantic-ui-react-labeledinput/master.svg?style=flat-square
