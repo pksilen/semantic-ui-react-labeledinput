@@ -234,10 +234,10 @@ validation: undefined
    Applying CSS using className
  
  ```js
- <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="box" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
- <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+<LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="box" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+<LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
  <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="box" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
- ```
+```
 
 ## Line input styling example
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example1.png) 
@@ -277,11 +277,11 @@ validation: undefined
    
    Applying CSS using className
        
- ```js
- <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
- <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
- <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
- ```
+```js
+<LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+<LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+<LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+```
 
 ## Credit card validations
 Supported cards
