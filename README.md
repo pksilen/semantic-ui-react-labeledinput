@@ -62,7 +62,7 @@ class LabeledInputExample extends React.Component {
       <LabeledInput inputId="address" label="Address" value={this.state.value} onValueChange={this.changeValue} />
   )};
 }
-```js
+```
 
 LabeledInput with box presentation (default presentation mode)
 
