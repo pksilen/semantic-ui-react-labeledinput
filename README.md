@@ -41,60 +41,74 @@ Input control with integrated label and validation support for [Semantic UI Reac
    LabeledInput [demo] 
    
 ## Example usage
-    import React from 'react';
-    import LabeledInput from 'semantic-ui-react-labeledinput';
-    
-    class LabeledInputExample extends React.Component {
+```js
+import React from 'react';
+import LabeledInput from 'semantic-ui-react-labeledinput';
 
-        constructor(props) {
-            super(props);
-            this.state = {
-                value: ""
-            };
-        }
-        
-        changeValue = (newValue) => {
-            this.setState({ value: newValue });
-        }
-       
-        render() => {(
-            <LabeledInput inputId="address" label="Address" value={this.state.value} onValueChange={this.changeValue} />
-        )};
-    }
+class LabeledInputExample extends React.Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+          value: ""
+      };
+  }
+
+  changeValue = (newValue) => {
+      this.setState({ value: newValue });
+  }
+
+  render() => {(
+      <LabeledInput inputId="address" label="Address" value={this.state.value} onValueChange={this.changeValue} />
+  )};
+}
+```js
 
 LabeledInput with box presentation (default presentation mode)
-    
-    <LabeledInput inputId="address" label="Address" presentation="box" value={this.state.value} onValueChange={this.changeValue} />
+
+```js
+<LabeledInput inputId="address" label="Address" presentation="box" value={this.state.value} onValueChange={this.changeValue} />
+```
     
 LabeledInput with line presentation
-    
-    <LabeledInput inputId="address" label="Address" presentation="line" value={this.state.value} onValueChange={this.changeValue} />
+
+```js
+<LabeledInput inputId="address" label="Address" presentation="line" value={this.state.value} onValueChange={this.changeValue} />
+```
     
 LabeledInput with predefined validations
-    
-    <LabeledInput errorText="value must be an integer" inputId="input1" label="Age" validation="integer" value={this.state.value} onValueChange={this.changeValue} />             
-    <LabeledInput errorText="Invalid e-mail address" inputId="input2" label="E-mail address" validation="emailAddress" value={this.state.value} onValueChange={this.changeValue} />
+
+```js
+<LabeledInput errorText="value must be an integer" inputId="input1" label="Age" validation="integer" value={this.state.value} onValueChange={this.changeValue} />             
+<LabeledInput errorText="Invalid e-mail address" inputId="input2" label="E-mail address" validation="emailAddress" value={this.state.value} onValueChange={this.changeValue} />
+```
     
 LabeledInput with regular expression validation
-     
-    const regExp = /^\d{3,4}$/;
-    <LabeledInput inputId="input1" label="CVC" validation={regExp} value={this.state.value} onValueChange={this.changeValue} />
+
+```js     
+const regExp = /^\d{3,4}$/;
+<LabeledInput inputId="input1" label="CVC" validation={regExp} value={this.state.value} onValueChange={this.changeValue} />
+```
      
 LabeledInput with validation function
-      
-    const isEvenNumber = (valueStr) => {
-        const value = parseInt(valueStr, 10);
-        return value % 2 === 0;
-    }
-  
-    <LabeledInput inputId="input1" label="Enter even number" validation={isEvenNumber} value={this.state.value} onValueChange={this.changeValue} />
-      
+
+```js
+const isEvenNumber = (valueStr) => {
+  const value = parseInt(valueStr, 10);
+  return value % 2 === 0;
+}
+
+<LabeledInput inputId="input1" label="Enter even number" validation={isEvenNumber} value={this.state.value} onValueChange={this.changeValue} />
+```
+
 LabeledInput with list of allowed values validation (case sensitive)
-       
-    const allowedValues = ['value1', 'value2', 'value3'];
-    <LabeledInput inputId="input1" label="Enter value" validation={allowedValues} value={this.state.value} onValueChange={this.changeValue} />
+
+```js
+const allowedValues = ['value1', 'value2', 'value3'];
+<LabeledInput inputId="input1" label="Enter value" validation={allowedValues} value={this.state.value} onValueChange={this.changeValue} />
+```
     
-More examples can be found in demo/demo.tsx file
+More examples can be found in `demo/demo.tsx` file
    
 ## Mandatory properties      
     inputId: string,  // Each input must to have a unique id
@@ -129,46 +143,50 @@ More examples can be found in demo/demo.tsx file
 
     
 ## Optional property types
-    allowEmptyValue: boolean,
-    className: string,  
-    countryCode: string,
-    creditCardNumber: string,
-    disabled: boolean,
-    errorText: string,
-    errorTextPosition: 'bottom' | 'right',
-    focus: boolean,
-    icon: string,
-    iconColor: string,
-    iconPosition: 'right',
-    maxLength: number,
-    maxValue: number,
-    minLength: number,
-    minValue: number,
-    presentation: 'box' | 'line',
-    size: 'large' | 'big' | 'huge' | 'massive',
-    type: string,
-    validation: RegExp | string[] | (inputString: string) => boolean | 'url' | 'emailAddress' | 'creditCardNumber' | 'creditCardExpiration' | 'creditCardVerificationCode' | 'number' | 'integer' | 'alphaNumeric' | 'usZipCode' | 'caPostCode' | 'ukPostCode' | 'phoneNumber' | 'usSSN' | 'ipAddress' | 'ipv4Address' | 'ipv6Address' | 'hexColor'
+```ts
+ allowEmptyValue: boolean,
+ className: string,  
+ countryCode: string,
+ creditCardNumber: string,
+ disabled: boolean,
+ errorText: string,
+ errorTextPosition: 'bottom' | 'right',
+ focus: boolean,
+ icon: string,
+ iconColor: string,
+ iconPosition: 'right',
+ maxLength: number,
+ maxValue: number,
+ minLength: number,
+ minValue: number,
+ presentation: 'box' | 'line',
+ size: 'large' | 'big' | 'huge' | 'massive',
+ type: string,
+ validation: RegExp | string[] | (inputString: string) => boolean | 'url' | 'emailAddress' | 'creditCardNumber' | 'creditCardExpiration' | 'creditCardVerificationCode' | 'number' | 'integer' | 'alphaNumeric' | 'usZipCode' | 'caPostCode' | 'ukPostCode' | 'phoneNumber' | 'usSSN' | 'ipAddress' | 'ipv4Address' | 'ipv6Address' | 'hexColor'
+ ```
         
 ## Default values for optional properties
-    allowEmptyValue: false,
-    className: undefined,
-    countryCode: '',
-    creditCardNumber: '',
-    disabled: false,
-    errorText: '',
-    errorTextPosition: 'bottom',
-    focus: false,
-    icon: '',
-    iconColor: undefined,
-    iconPosition: 'right',
-    maxLength: undefined,
-    maxValue: undefined,
-    minLength: undefined,
-    minValue: undefined,
-    presentation: 'box',
-    size: 'huge',
-    type: undefined,
-    validation: undefined
+```js
+ allowEmptyValue: false,
+ className: undefined,
+ countryCode: '',
+ creditCardNumber: '',
+ disabled: false,
+ errorText: '',
+ errorTextPosition: 'bottom',
+ focus: false,
+ icon: '',
+ iconColor: undefined,
+ iconPosition: 'right',
+ maxLength: undefined,
+ maxValue: undefined,
+ minLength: undefined,
+ minValue: undefined,
+ presentation: 'box',
+ size: 'huge',
+ type: undefined,
+ validation: undefined
+ ```
     
 ## Class names  
 | Class name       | Description                                                                                                                                                                      |
@@ -185,37 +203,41 @@ More examples can be found in demo/demo.tsx file
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_box_example3.png)
     
    styles.css
-   
-    .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
-      font-size: 0.9em;
-    }
-       
-    .creditCardNumber input {
-      width: 14em;
-    }
-       
-    .creditCardExpiration {
-      margin-left: 0.5em;
-    }
-       
-    .creditCardExpiration input {
-      width: 6em;
-    }
-       
-    .cvc {
-      margin-left: 0.5em;
-    }
-       
-    .cvc input {
-      margin-left: 0.5em;
-      width: 4.5em;
-    }
+ 
+ ```css
+ .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
+   font-size: 0.9em;
+ }
+
+ .creditCardNumber input {
+   width: 14em;
+ }
+
+ .creditCardExpiration {
+   margin-left: 0.5em;
+ }
+
+ .creditCardExpiration input {
+   width: 6em;
+ }
+
+ .cvc {
+   margin-left: 0.5em;
+ }
+
+ .cvc input {
+   margin-left: 0.5em;
+   width: 4.5em;
+ }
+ ```
    
    Applying CSS using className
-       
-    <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="box" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
-    <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
-    <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="box" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+ 
+ ```js
+ <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="box" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+ <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="box" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+ <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="box" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+ ```
 
 ## Line input styling example
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example1.png) 
@@ -225,37 +247,41 @@ More examples can be found in demo/demo.tsx file
    ![Example image of LabeledInput](https://raw.githubusercontent.com/pksilen/semantic-ui-react-labeledinput/master/example/styled_line_example3.png)
     
    styles.css
-   
-    .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
-      font-size: 0.7em;
-    }
-       
-    .creditCardNumber input {
-      width: 13.5em;
-    }
-       
-    .creditCardExpiration {
-      margin-left: 0.5em;
-    }
-       
-    .creditCardExpiration input {
-      width: 4.5em;
-    }
-       
-    .cvc {
-      margin-left: 0.5em;
-    }
-       
-    .cvc input {
-      margin-left: 0.5em;
-      width: 3.5em;
-    }
+
+```css
+ .creditCardNumber .ui.label.errorLabel, .creditCardExpiration .ui.label.errorLabel, .cvc .ui.label.errorLabel {
+   font-size: 0.7em;
+ }
+
+ .creditCardNumber input {
+   width: 13.5em;
+ }
+
+ .creditCardExpiration {
+   margin-left: 0.5em;
+ }
+
+ .creditCardExpiration input {
+   width: 4.5em;
+ }
+
+ .cvc {
+   margin-left: 0.5em;
+ }
+
+ .cvc input {
+   margin-left: 0.5em;
+   width: 3.5em;
+ }
+ ```
    
    Applying CSS using className
        
-    <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
-    <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
-    <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+ ```js
+ <LabeledInput className="creditCardNumber" inputId="creditCardNumber" label="Credit card number" errorText="must be a cc number" presentation="line" validation="creditCardNumber" onValueChange={this.changeCreditCardNumber} value={creditCardNumber}/>
+ <LabeledInput className="creditCardexpiration" inputId="creditCardExpiration" label="MM / YY" errorText="must be a MM / YY" presentation="line" validation="creditCardExpiration" onValueChange={this.changeCreditCardExpiration} value={creditCardExpiration}/>
+ <LabeledInput className="cvc" inputId="cvc" label="CVC" errorText="must be a CVC" presentation="line" validation="creditCardVerificationCode" onValueChange={this.changeCVC} value={cvc}/>
+ ```
 
 ## Credit card validations
 Supported cards
