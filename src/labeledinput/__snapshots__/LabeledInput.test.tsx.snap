@@ -3,7 +3,7 @@
 exports[`render() it should render component with given presentation correctly 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -16,7 +16,7 @@ exports[`render() it should render component with given presentation correctly 1
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -35,7 +35,7 @@ exports[`render() it should render component with given presentation correctly 1
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -50,7 +50,7 @@ exports[`render() it should render component with given presentation correctly 1
 exports[`render() it should render component with given presentation correctly 2`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -63,7 +63,7 @@ exports[`render() it should render component with given presentation correctly 2
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -82,7 +82,7 @@ exports[`render() it should render component with given presentation correctly 2
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "borderLeft": "none",
           "borderRadius": 0,
           "borderRight": "none",
@@ -105,7 +105,7 @@ exports[`render() should render component with additional HTML attributes correc
   className="test"
   id="test1"
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -118,7 +118,7 @@ exports[`render() should render component with additional HTML attributes correc
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -137,7 +137,7 @@ exports[`render() should render component with additional HTML attributes correc
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -152,7 +152,7 @@ exports[`render() should render component with additional HTML attributes correc
 exports[`render() should render component with errorTextPosition "right" correctly 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
     }
   }
@@ -164,7 +164,7 @@ exports[`render() should render component with errorTextPosition "right" correct
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -183,7 +183,7 @@ exports[`render() should render component with errorTextPosition "right" correct
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -198,7 +198,7 @@ exports[`render() should render component with errorTextPosition "right" correct
 exports[`render() should render disabled component correctly 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -211,7 +211,7 @@ exports[`render() should render disabled component correctly 1`] = `
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -230,7 +230,7 @@ exports[`render() should render disabled component correctly 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -245,7 +245,7 @@ exports[`render() should render disabled component correctly 1`] = `
 exports[`render() should render focused component correctly 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -258,7 +258,7 @@ exports[`render() should render focused component correctly 1`] = `
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -277,7 +277,7 @@ exports[`render() should render focused component correctly 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -292,7 +292,7 @@ exports[`render() should render focused component correctly 1`] = `
 exports[`render() should render icon correctly depending on iconPosition and iconColor 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -305,7 +305,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -324,7 +324,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -336,7 +336,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
       as="i"
       color="blue"
       name="search"
-      style={Object {}}
+      style={{}}
     />
   </div>
 </div>
@@ -345,7 +345,7 @@ exports[`render() should render icon correctly depending on iconPosition and ico
 exports[`render() should render validationErrorIcon correctly on right side 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -358,7 +358,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -377,7 +377,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -390,7 +390,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
       color="green"
       name=""
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
@@ -402,7 +402,7 @@ exports[`render() should render validationErrorIcon correctly on right side 1`] 
 exports[`render() should render validationSuccessIcon correctly on right side 1`] = `
 <div
   style={
-    Object {
+    {
       "display": "inline-flex",
       "flexDirection": "column",
     }
@@ -415,7 +415,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
       className="focusedOrValued"
       htmlFor="input1"
       style={
-        Object {
+        {
           "fontSize": "65%",
           "left": 0,
           "lineHeight": "1.21428571em",
@@ -434,7 +434,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
       onChange={[Function]}
       onFocus={[Function]}
       style={
-        Object {
+        {
           "paddingBottom": "0.407142858em",
           "paddingTop": "0.95em",
         }
@@ -447,7 +447,7 @@ exports[`render() should render validationSuccessIcon correctly on right side 1`
       color="green"
       name=""
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
